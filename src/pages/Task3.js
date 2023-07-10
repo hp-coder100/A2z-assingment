@@ -2,7 +2,7 @@
 import React from "react";
 
 import { Container, Row, Col, Card, ListGroup } from "react-bootstrap";
-import { useStateValue } from "./StateProvider";
+import { useStateValue } from "../statemangement/StateProvider";
 
 const Task3 = () => {
   const [state, dispatch] = useStateValue();

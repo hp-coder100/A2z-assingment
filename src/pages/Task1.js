@@ -1,7 +1,7 @@
 import React from "react";
 import { Button, Col, Container, Row } from "react-bootstrap";
-import { useStateValue } from "../StateProvider";
-import axios from "axios";
+import { useStateValue } from "../statemangement/StateProvider";
+
 const Task1 = () => {
   const [{ users, circles }, dispatch] = useStateValue();
   

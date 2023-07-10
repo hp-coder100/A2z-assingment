@@ -1,18 +1,16 @@
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Task1 from "./Task1";
-import Task2 from "./Task2";
-import Task3 from "./Task3";
+import Task1 from "./pages/Task1";
+import Task2 from "./pages/Task2";
+import Task3 from "./pages/Task3";
 import Navigation from "./Navigation";
-import Error404 from "./Error404";
-import { useStateValue } from "./StateProvider";
+import Error404 from "./pages/Error404";
+import { useStateValue } from "./statemangement/StateProvider";
 import { useEffect } from "react";
 import axios from "axios";
 
-
 function App() {
-
   const [state, dispatch] = useStateValue();
   const fetchUsers = async () => {
     try {
@@ -28,12 +26,11 @@ function App() {
       console.error(error);
     }
   };
-  useEffect(()=>{
-    if(state.circles.length > state.users.length){
+  useEffect(() => {
+    if (state.circles.length > state.users.length) {
       fetchUsers();
     }
-  },[state])
-
+  }, [state]);
 
   return (
     <BrowserRouter>

@@ -1,7 +1,7 @@
 // Task2.js
 import React from "react";
 import { Container, Row, Col, Card } from "react-bootstrap";
-import { useStateValue } from "./StateProvider";
+import { useStateValue } from "../statemangement/StateProvider";
 import { useNavigate } from "react-router-dom";
 
 const Task2 = () => {
