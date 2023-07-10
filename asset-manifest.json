@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/A2z-assingment/static/css/main.30ea52ad.css",
-    "main.js": "/A2z-assingment/static/js/main.863c0f4f.js",
+    "main.js": "/A2z-assingment/static/js/main.25ed3f43.js",
     "static/js/787.0420ccf9.chunk.js": "/A2z-assingment/static/js/787.0420ccf9.chunk.js",
     "index.html": "/A2z-assingment/index.html",
     "main.30ea52ad.css.map": "/A2z-assingment/static/css/main.30ea52ad.css.map",
-    "main.863c0f4f.js.map": "/A2z-assingment/static/js/main.863c0f4f.js.map",
+    "main.25ed3f43.js.map": "/A2z-assingment/static/js/main.25ed3f43.js.map",
     "787.0420ccf9.chunk.js.map": "/A2z-assingment/static/js/787.0420ccf9.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.30ea52ad.css",
-    "static/js/main.863c0f4f.js"
+    "static/js/main.25ed3f43.js"
   ]
 }
