@@ -35,20 +35,22 @@ function App() {
   return (
     <BrowserRouter>
       <Navigation></Navigation>
-    <Routes>  
-    <Route path="/A2z-assingment">
-      
-        <Route path="/A2z-assingment/" element={<Task1></Task1>}></Route>
+      <Routes>
+        <Route path="/A2z-assingment">
+          <Route path="/A2z-assingment/" element={<Task1></Task1>}></Route>
 
-        <Route path="/A2z-assingment/task2" element={<Task2></Task2>}></Route>
+          <Route path="/A2z-assingment/task2" element={<Task2></Task2>}></Route>
 
-        <Route path="/A2z-assingment/task3" element={<Task3></Task3>}></Route>
+          <Route path="/A2z-assingment/task3" element={<Task3></Task3>}></Route>
 
+          <Route path="*" element={<Error404></Error404>}></Route>
+        </Route>
         <Route path="*" element={<Error404></Error404>}></Route>
-    </Route>  
-    <Route path="*" element={<Error404></Error404>}></Route>
-   
-    </Routes>
+      </Routes>
+      <div className="d-flex flex-column flex-md-row justify-content-around px-2 align-items-center bg-dark text-white fixed-bottom">
+        <p>Subbmitted by : HEMANT PRAJAPTI</p>
+        <p> Email : hemantprajapati6507@gmail.com </p>
+      </div>
     </BrowserRouter>
   );
 }

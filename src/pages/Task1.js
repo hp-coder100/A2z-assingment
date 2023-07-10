@@ -4,10 +4,10 @@ import { useStateValue } from "../statemangement/StateProvider";
 
 const Task1 = () => {
   const [{ users, circles }, dispatch] = useStateValue();
-  
+
   const handleIncrement = (e, index) => {
     e.preventDefault();
-    
+
     const newCircles = [...circles];
     newCircles[index] = {
       counter: circles[index].counter + 1,
@@ -22,7 +22,6 @@ const Task1 = () => {
   const handleDuplicate = (e, index) => {
     e.preventDefault();
     if (circles.length >= 10) return;
-    
 
     const newCircles = [...circles];
     newCircles[index] = { counter: 0, color: circles[index].color };
@@ -44,7 +43,7 @@ const Task1 = () => {
   };
 
   return (
-    <Container>
+    <Container style={{ marginBottom: "100px" }}>
       <Row xs={1} sm={2} md={3} lg={4} className="justify-content-center">
         {circles.map((circle, index) => (
           <Col key={index} className="text-center my-4">

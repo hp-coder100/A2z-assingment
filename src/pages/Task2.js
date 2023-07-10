@@ -14,11 +14,11 @@ const Task2 = () => {
       type: "SET_SELECTED",
       value: index,
     });
-    navigate("/task3");
+    navigate("/A2z-assingment/task3");
   };
 
   return (
-    <Container>
+    <Container style={{ marginBottom: "100px" }}>
       <h2 className="text-center mb-3">Employee List</h2>
       <Row className="justify-content-center m-2">
         {users.map((user, index) => (
