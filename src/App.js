@@ -1,24 +1,53 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Task1 from "./Task1";
+import Task2 from "./Task2";
+import Task3 from "./Task3";
+import Navigation from "./Navigation";
+import Error404 from "./Error404";
+import { useStateValue } from "./StateProvider";
+import { useEffect } from "react";
+import axios from "axios";
+
 
 function App() {
+
+  const [state, dispatch] = useStateValue();
+  const fetchUsers = async () => {
+    try {
+      const response = await axios.get(
+        `https://random-data-api.com/api/v2/users`
+      );
+
+      dispatch({
+        type: "SET_USERS",
+        value: [...state.users, { ...response.data }],
+      });
+    } catch (error) {
+      console.error(error);
+    }
+  };
+  useEffect(()=>{
+    if(state.circles.length > state.users.length){
+      fetchUsers();
+    }
+  },[state])
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Navigation></Navigation>
+      <Routes>
+        <Route path="/" element={<Task1></Task1>}></Route>
+
+        <Route path="/task2" element={<Task2></Task2>}></Route>
+
+        <Route path="/task3" element={<Task3></Task3>}></Route>
+
+        <Route path="*" element={<Error404></Error404>}></Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 
