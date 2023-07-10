@@ -1,3 +1,46 @@
+
+# Assessment 1 Completed these given tasks
+
+## Task 0: Navigation System
+
+Setup a navigation system which routes to 4 pages representing individual tasks. Also, include a "404 not found" page for nonexistent routes.
+
+## Task 1: Circle Counter
+
+At the center of the page, add a circle with a diameter of 10% of the screen size. Place 2 buttons below the circle.
+
+### Circle
+
+- The circle should start with a yellow background.
+- Display a counter (number) starting from 0 in the center.
+- Show the current background color below the counter.
+
+### Button 1
+
+- On click, this button should increase the counter by 1.
+- Change the background color of its respective circle to a random color.
+
+### Button 2
+
+- On click, duplicate the circle exactly as it is, placing the duplicate to the right.
+- Reset the counters of both circles to 0.
+
+**Note:** Allow a maximum of 10 circles on the screen, arranged in 2 centered rows. Each circle's color and counter should only affect its respective circle and not others.
+
+## Task 2: Fetch User Data
+
+Using the number of circles displayed on page 1, fetch data from a provided API for that many users. Display their ID, Full Name, Avatar, and title on individual cards using a grid system. Clicking on any card will navigate to the third page.
+
+## Task 3: User Details
+
+Display all the details of the selected user from the previous page. Implement a clean design and use centralized state management for the data.
+
+## Technologies Used
+-React Js
+
+--------------------------------------------------------------------------------------------------------------------------------
+================================================================================================================================
+--------------------------------------------------------------------------------------------------------------------------------
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
