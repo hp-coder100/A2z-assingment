@@ -35,7 +35,7 @@ function App() {
   return (
     <BrowserRouter>
       <Navigation></Navigation>
-      <Routes>
+      <Routes path="/A2z-assingment">
         <Route path="/" element={<Task1></Task1>}></Route>
 
         <Route path="/task2" element={<Task2></Task2>}></Route>
